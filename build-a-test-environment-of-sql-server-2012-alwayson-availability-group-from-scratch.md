@@ -240,24 +240,26 @@ Click <strong>Finish</strong> and the failover will complete shortly.
 <a href="images/6505.SqlTest01FailoverResults.png"><img src="images/6505.SqlTest01FailoverResults.png" alt="" border="0" /></a>
 
 3.16 Let's write some C# code to connect to the database in AG MyAG01. Assume that you've created a table called Table1 in database AGTest01.
-<pre class="scroll"><code class="csharp">public static void Main(string[] args)
-</code><code class="csharp">{
- string connectionString = "Data Source=<span style="background-color: #ffff00">MyAG01</span>;Initial Catalog=AGTest01;Connection TimeOut=60;Max Pool Size=1000;Integrated Security=SSPI;persist security info=False";
+```
+public static void Main(string[] args)
+{
+    string connectionString = "Data Source=<span style="background-color: #ffff00">MyAG01</span>;Initial Catalog=AGTest01;Connection TimeOut=60;Max Pool Size=1000;Integrated Security=SSPI;persist security info=False";
 
- using (SqlConnection connection = new SqlConnection(connectionString))
- {
- connection.Open();
- Console.WriteLine("DataSource: {0}", connection.DataSource);
+     using (SqlConnection connection = new SqlConnection(connectionString))
+     {
+         connection.Open();
+         Console.WriteLine("DataSource: {0}", connection.DataSource);
  
- using (SqlCommand sqlCommand = connection.CreateCommand())
- {
- sqlCommand.CommandText = "SELECT * FROM Table1";
- sqlCommand.CommandType = CommandType.Text;
+         using (SqlCommand sqlCommand = connection.CreateCommand())
+         {
+             sqlCommand.CommandText = "SELECT * FROM Table1";
+             sqlCommand.CommandType = CommandType.Text;
  
- sqlCommand.ExecuteReader();
+             sqlCommand.ExecuteReader();
+         }
+     }
  }
- }
- }</code></pre>
-Run this application on SqlTestDC, and you will see the output is "<strong>MyAG01</strong>", i.e., the Listener DNS name. BTW, that is different from SQL Mirroring, in which the DataSource is the current principal server.
+ ````
+Run this application on SqlTestDC, and you will see the output is **MyAG01**, i.e., the Listener DNS name. BTW, that is different from SQL Mirroring, in which the DataSource is the current principal server.
 
 3.17 Now you can play with Availability Group by yourself. Try various <strong>Availability Mode</strong>s, <strong>Failover Mode</strong>s, replica readability settings, adding more databases and/or more replicas, etc. Before that, don't forget to take a checkpoint for the servers, so that you can rollback to the current status easily. Enjoy!

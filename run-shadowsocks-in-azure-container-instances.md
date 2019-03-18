@@ -4,11 +4,11 @@ I assume that you already have an Azure subscription at hand and there is at lea
 
 To run the command to create a running Shadowsocks server, go to <a href="https://portal.azure.com">Azure Portal</a>, click the Cloud Shell icon in the top bar.
 
-<a href="https://msdnshared.blob.core.windows.net/media/2018/01/cloud_shell_icon.png"><img src="https://msdnshared.blob.core.windows.net/media/2018/01/cloud_shell_icon.png" alt="Cloud Shell Icon" class="alignnone size-medium" /></a>
+<a href="images/cloud_shell_icon.png"><img src="images/cloud_shell_icon.png" alt="Cloud Shell Icon" class="alignnone size-medium" /></a>
 
 In the Cloud Shell that pops up at the bottom, make sure <strong>Bash</strong> is selected since the command is in Azure CLI. Type the below command.
 <pre>az container create -g shadowsocks --name shadowsocks1 --image oddrationale/docker-shadowsocks --ip-address public --ports 8388 --command-line "/usr/local/bin/ssserver -k password1"</pre>
-<a href="https://msdnshared.blob.core.windows.net/media/2018/01/cloud_shell_cmd2.png"><img src="https://msdnshared.blob.core.windows.net/media/2018/01/cloud_shell_cmd2.png" alt="Cloud Shell Command" class="alignnone size-medium" /></a>
+<a href="images/cloud_shell_cmd2.png"><img src="images/cloud_shell_cmd2.png" alt="Cloud Shell Command" class="alignnone size-medium" /></a>
 
 In the above command,
 <ul>
@@ -24,7 +24,7 @@ Running the above script in Cloud Shell will return a JSON object, which means t
 
 To verify that the Shadowsocks server is running well, navigate to the container group that you created and check its <strong>STATE</strong>. It should be <strong>Running</strong> if everything went smooth. Remember the IP address, which you will use when you connect to the server.
 
-<a href="https://msdnshared.blob.core.windows.net/media/2018/01/container_running1.png"><img src="https://msdnshared.blob.core.windows.net/media/2018/01/container_running1.png" alt="Container Running" class="alignnone size-medium" /></a>
+<a href="images/container_running1.png"><img src="images/container_running1.png" alt="Container Running" class="alignnone size-medium" /></a>
 
 With just one command, we've got a Shadowsocks server running in Azure Container Instance.
 
@@ -35,4 +35,4 @@ Just for completeness, I'll show you how to use connect to the server from iOS.
  	<li>Toggle the connect button to connect to the Shadowsocks server.</li>
  	<li>Now you can open Google from mainland China!</li>
 </ol>
-<img src="https://msdnshared.blob.core.windows.net/media/2018/01/WeChat-Image_20180104115941.png" alt="Add Server" class="alignnone size-medium" width="240" /> <img src="https://msdnshared.blob.core.windows.net/media/2018/01/WeChat-Image_20180104115949.png" alt="Connect" class="alignnone size-medium" width="240" /> <img src="https://msdnshared.blob.core.windows.net/media/2018/01/WeChat-Image_20180104132409.png" alt="Google" class="alignnone size-medium" width="240" />
+<img src="images/WeChat-Image_20180104115941.png" alt="Add Server" class="alignnone size-medium" width="240" /> <img src="images/WeChat-Image_20180104115949.png" alt="Connect" class="alignnone size-medium" width="240" /> <img src="images/WeChat-Image_20180104132409.png" alt="Google" class="alignnone size-medium" width="240" />

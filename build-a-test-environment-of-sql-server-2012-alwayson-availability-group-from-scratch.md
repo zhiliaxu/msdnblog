@@ -237,7 +237,7 @@ On the Summary page, you can save the SQL script for AG failover by selecting <s
 
 Click <strong>Finish</strong> and the failover will complete shortly.
 
-<a href="https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/01/63/97/6505.SqlTest01FailoverResults.png"><img src="https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/01/63/97/6505.SqlTest01FailoverResults.png" alt="" border="0" /></a>
+<a href="images"><img src="images" alt="" border="0" /></a>
 
 3.16 Let's write some C# code to connect to the database in AG MyAG01. Assume that you've created a table called Table1 in database AGTest01.
 <pre class="scroll"><code class="csharp">public static void Main(string[] args)

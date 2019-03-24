@@ -1,3 +1,5 @@
+# Build A Test Environment of SQL Server 2012 AlwaysOn Availability Group from Scratch
+
 Recently I started learn SQL Server 2012 AlwaysOn Availability Group (AG). After reading some online documents, I couldn't wait to create my own Availability Group to practice it. Meanwhile, I had lots of trials and failures and learned a lot of new knowledge, and that's why I want to share the process. If you are also new to AG and want to get your hands wet with it, just follow me:)
 
 Overall, there are 3 steps.

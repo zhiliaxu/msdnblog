@@ -30,7 +30,7 @@ To verify that the Shadowsocks server is running well, navigate to the container
 
 With just one command, we've got a Shadowsocks server running in Azure Container Instance.
 
-Just for completeness, I'll show you how to use connect to the server from iOS.
+Just for completeness, I'll show you how to connect to the server from iOS.
 <ol>
  	<li>Install <a href="https://itunes.apple.com/us/app/shadowrocket/id932747118">Shadowrocket</a> from App Store. When first run, you need to grant permission to the app to write VPN settings. Other Shadowsocks client apps also work.</li>
  	<li>Add a server and fill in the <strong>Host</strong>, <strong>Port</strong> and <strong>Password</strong> fields accordingly. Leave other fields as default.</li>
